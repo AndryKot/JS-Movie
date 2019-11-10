@@ -1,0 +1,53 @@
+{
+	"list": [
+		{
+			"ID": "0000000001",
+			"Name": "Action",
+			"NameTranslations": [],
+			"Description": null,
+			"DescriptionTranslations": []
+		},
+		{
+			"ID": "0000000002",
+			"Name": "Comedy",
+			"NameTranslations": [],
+			"Description": null,
+			"DescriptionTranslations": []
+		},
+		{
+			"ID": "0000000003",
+			"Name": "Thriller",
+			"NameTranslations": [],
+			"Description": null,
+			"DescriptionTranslations": []
+		},
+		{
+			"ID": "0000000004",
+			"Name": "Drama",
+			"NameTranslations": [],
+			"Description": "",
+			"DescriptionTranslations": []
+		},
+		{
+			"ID": "0000000005",
+			"Name": "Mystery",
+			"NameTranslations": [],
+			"Description": "Екшн",
+			"DescriptionTranslations": []
+		},
+		{
+			"ID": "0000000006",
+			"Name": "Adventure",
+			"NameTranslations": [],
+			"Description": null,
+			"DescriptionTranslations": []
+		},
+		{
+			"ID": "0000000007",
+			"Name": "Other",
+			"NameTranslations": [],
+			"Description": null,
+			"DescriptionTranslations": []
+		}
+	]
+}
