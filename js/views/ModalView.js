@@ -10,10 +10,9 @@
     }
 
     ModalView.prototype.emptyModal = function () {
-        // empty title && content
         while (this.popupTitle.firstChild) this.popupTitle.removeChild(this.popupTitle.firstChild);
         while (this.popupBody.firstChild) this.popupBody.removeChild(this.popupBody.firstChild);
-    }
+    };
 
     ModalView.prototype.showModal = function (e) {
         this.emptyModal();
@@ -30,11 +29,9 @@
         this.wrapper.classList.remove('hidden');
 
         this.closeButton.addEventListener('click', this.hideModal.bind(this));
-        // this.wrapper.addEventListener('click', this.hideModal.bind(this));
-    }
+    };
 
     ModalView.prototype.hideModal = function (e, options) {
-        // click outside popup
         if (options !== '-force' && this.popup.contains(e.target) && e.target !== this.closeButton) {
             return;
         }
@@ -45,8 +42,7 @@
         this.emptyModal();
 
         this.closeButton.removeEventListener('click', this.hideModal.bind(this));
-        // this.wrapper.removeEventListener('click', this.hideModal.bind(this));
-    }
+    };
 
     window.ModalView = ModalView;
-})()
+})();

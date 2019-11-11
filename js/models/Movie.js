@@ -28,14 +28,8 @@
         },
         remove: function (key) {
             delete this[key];
-        },
-        setScore: function () {
-            return 'set score function for ' + this.Title;
-        },
-        playVideo: function () {
-            return 'play function for ' + this.Title;
         }
-    }
+    };
 
     window.Movie = Movie;
-})()
+})();

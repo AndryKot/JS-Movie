@@ -4,7 +4,7 @@
 
     MovieListView.prototype.clear = function (container) {
         while (container.firstChild) container.removeChild(container.firstChild);
-    }
+    };
 
     MovieListView.prototype.render = function (data, container) {
         this.movies = data.map(function (el) {
@@ -17,10 +17,6 @@
         this.moviesContainer = document.createElement('div');
         this.moviesContainer.setAttribute('class', 'container');
         this.counter = document.querySelector('.movielist-info__row');
-
-        // var addTile = `<li class="nav-menu__add">
-        //     <p><button title="Add Movie" class="add-button">+</button></p>
-        // </li>`;
 
         while (this.counter.firstChild) this.counter.removeChild(this.counter.firstChild);
         if (this.movies.length > 1) {
@@ -36,13 +32,11 @@
 
         container.append(this.moviesContainer);
 
-        //this.moviesContainer.insertAdjacentHTML('beforeend', addTile);
-
         addEventListener('click', function (e) {
             if (e.target.closest('.add-button')) {
                 var newMovieModal = new window.MovieEditView();
                 newMovieModal.renderModal();
-            };
+            }
 
             if (!e.target.closest('.movie-section')) return;
 
@@ -51,7 +45,7 @@
 
             movieDetails.renderModal();
         });
-    }
+    };
 
     window.MovieListView = MovieListView;
-})()
+})();

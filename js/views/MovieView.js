@@ -3,9 +3,7 @@
         this.id = id;
         this.element = document.createElement('div');
         this.element.setAttribute('class', 'movie');
-
         this.movie = movieList.getById(this.id);
-
         var movieHtml = `
             <div class="row">
                 <div class="col-12 col-md-3">
@@ -17,9 +15,8 @@
                     <div class="movie__content">
                         <h1 class="movie__title">${this.movie.Title}</h1>
                         <div class="movie__row"><span class="movie__row-title">Director: </span><span class="movie__row-text">${this.movie.producerName}</span></div>
-                        <div class="movie__row"><span class="movie__row-title">Stars: </span><span class="movie__row-text">${this.movie.Actors}</span></div>
+                        <div class="movie__row"><span class="movie__row-title">Actors: </span><span class="movie__row-text">${this.movie.actorsList}</span></div>
                         <div class="movie__row"><span class="movie__row-title">Country: </span><span class="movie__row-text">${this.movie.country}</span></div>
-                        <div class="movie__row"><span class="movie__row-title">Genre: </span><span class="movie__row-text">${this.movie.Genred}</span></div>
                         <div class="movie__row"><span class="movie__row-title">Rating: </span><span class="movie__row-text">${this.movie.Rating}</span></div>
                         <div class="movie__row"><span class="movie__row-title">Year: </span><span class="movie__row-text">${this.movie.OpeningDate}</span></div>
                         <p class="movie__info mt-4 mb-4">${this.movie.synopsis}</p>
@@ -35,7 +32,7 @@
 
     MovieView.prototype.render = function () {
         return this.element;
-    }
+    };
 
     MovieView.prototype.renderModal = function () {
         var modal = new window.ModalView(this.render());
@@ -49,7 +46,7 @@
             var movie = new MovieEditView(this.movie);
             movie.renderModal();
         }.bind(this));
-    }
+    };
 
     window.MovieView = MovieView;
-})()
+})();

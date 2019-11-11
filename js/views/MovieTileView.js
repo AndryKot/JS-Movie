@@ -22,7 +22,7 @@
 
     MovieTileView.prototype.getElement = function () {
         return this.movie_section;
-    }
+    };
 
-    window.MovieTileView = MovieTileView; // "export"
-})()
+    window.MovieTileView = MovieTileView;
+})();

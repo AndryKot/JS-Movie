@@ -3,7 +3,7 @@
         this.element = document.createElement('div');
         this.element.setAttribute('class', 'movie-edit');
 
-        var movieProps = movie ? Object.entries(movie) : ['ID', 'Title', 'TitleAlt', 'actorsList', 'producerName', 'country', 'Genred', 'Image', 'synopsis', 'Rating', 'OpeningDate', 'trailerUrl'];
+        var movieProps = movie ? Object.entries(movie) : ['ID', 'Title', 'actorsList', 'producerName', 'country', 'Image', 'synopsis', 'Rating', 'OpeningDate', 'trailerUrl'];
 
         var rowsHtml = '';
         this.title = movie ? 'Edit Movie' : 'New Movie';
@@ -12,8 +12,6 @@
         this.modal = new window.ModalView(this.render(), this.title);
 
         movieProps.forEach(element => {
-            // if (element[0] === 'ID' || element[0] === 'views') return;
-
             var placeholder = Array.isArray(element) ? 'Enter ' + element[0] : 'Enter ' + element;
             var key = Array.isArray(element) ? element[0] : element;
             var value = Array.isArray(element) ? element[1] : '';
@@ -82,7 +80,6 @@
                 window.movieListData = data;
                 window.movieListFiltered = data;
                 movieListView.render(data, document.querySelector('.container'));
-                filters.render();
             });
 
             this.modal.hideModal(e, '-force');
@@ -103,22 +100,21 @@
                     window.movieListData = data;
                     window.movieListFiltered = data;
                     movieListView.render(data, document.querySelector('.container'));
-                    filters.render();
                 });
     
                 this.modal.hideModal(e, '-force');
             });
         }
-    }
+    };
 
     MovieEditView.prototype.render = function () {
         return this.element;
-    }
+    };
 
     MovieEditView.prototype.renderModal = function () {
         this.modal.showModal();
         this.controls();
-    }
+    };
 
     window.MovieEditView = MovieEditView;
-})()
+})();
