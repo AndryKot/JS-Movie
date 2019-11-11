@@ -1,4 +1,4 @@
-# ITEA MovieList Project
+# ITEA JS-Advanced Movie
 ## 1. Start server
 * cd server
 * node server.js
