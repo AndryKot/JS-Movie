@@ -59,11 +59,35 @@ button {
 	align-items: center;
 }
 
-.top-menu__item {
+.nav-menu__item {
 	position: relative;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	display: flex;
 	align-items: center;
+}
+.nav-menu__text {
+	background-color: transparent;
+	margin-left: 10px;
+	margin-right: 20px;
+	color: #147921;
+}
+.nav-menu__Rate{
+	background-color: transparent;
+	margin-left: 10px;
+	margin-right: 20px;
+	color: #eb7f19;
+}
+.nav-menu__Date{
+	background-color: transparent;
+	margin-left: 10px;
+	margin-right: 20px;
+	color: #e765eb;
+}
+.nav-menu__Name{
+	background-color: transparent;
+	margin-left: 10px;
+	margin-right: 20px;
+	color: #0d0aeb;
 }
 
 .title-link {
